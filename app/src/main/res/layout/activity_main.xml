@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/gl_0.5"
+            app:layout_constraintGuide_percent="0.5"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/gl_0.25"
+            app:layout_constraintGuide_percent="0.25"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/gl_0.25"
+            app:layout_constraintEnd_toStartOf="@+id/gl_0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/foto_perfil" />
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/encabezado"
+            android:layout_width="0dp"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gl_0.5"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kevin Maggio"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Programador Android"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/experiencia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gl_0.5"
+            app:layout_constraintTop_toTopOf="@+id/gl_0.25">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                style="@style/CardView.Dark"
+                android:gravity="start"
+                android:textColor="@color/white"
+                android:layout_marginBottom="16dp"
+                android:text="@string/experiencia_laboral"/>
+            <TextView
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="@string/alkemy_aceleracion"/>
+            <Button
+                android:id="@+id/bt_experiencia_alkemy"
+                android:layout_width="wrap_content"
+                android:backgroundTint="#1A237E"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:text="@string/experiencia_obtenida"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="@string/ventas_cencosud_del_2013_2021"/>
+            <Button
+                android:id="@+id/bt_experiencia_cencosud"
+                android:layout_width="wrap_content"
+                android:backgroundTint="#1A237E"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:text="@string/experiencia_obtenida"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:text="@string/reparacion_de_computadoras"/>
+            <Button
+                android:id="@+id/bt_experiencia_reparacion"
+                android:layout_width="wrap_content"
+                android:backgroundTint="#1A237E"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/white"
+                android:text="@string/experiencia_obtenida"/>
+            <Button
+                android:id="@+id/bt_quien_soy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quien_soy"
+                android:backgroundTint="#ff0000"
+                android:textColor="@color/black"/>
+            <Button
+                android:id="@+id/bt_solicitar_entrevista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/solicitar_entrevista"
+                android:backgroundTint="#1a23ff"
+                android:layout_marginTop="16dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/gl_0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@+id/gl_0.25">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contacto"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="25sp"/>
+
+            <ImageButton
+                android:id="@+id/ib_gmail"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/gmail"
+                android:scaleType="fitXY"/>
+            <ImageButton
+                android:id="@+id/ib_facebook"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/face"/>
+            <ImageButton
+                android:id="@+id/ib_linkedin"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/linkedin"
+                android:layout_margin="12dp"/>
+            <ImageButton
+                android:id="@+id/ib_git"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/git"
+                android:layout_margin="12dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/librerias_y_tecnologias"
+                android:layout_margin="12dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+            <ImageButton
+                android:id="@+id/ib_librerias"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/book"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

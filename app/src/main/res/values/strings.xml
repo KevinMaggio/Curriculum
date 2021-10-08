@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CurriculumKevinMaggio</string>
+    <string name="librerias_y_tecnologias">Librerias y tecnologias</string>
+    <string name="contacto">Contacto</string>
+    <string name="solicitar_entrevista">solicitar entrevista</string>
+    <string name="quien_soy">Quien Soy</string>
+    <string name="reparacion_de_computadoras">Reparacion de computadoras</string>
+    <string name="experiencia_obtenida">experiencia Obtenida:</string>
+    <string name="ventas_cencosud_del_2013_2021">Ventas: Cencosud del 2013/2021</string>
+    <string name="alkemy_aceleracion">Alkemy: Aceleracion</string>
+    <string name="experiencia_laboral">Experiencia Laboral</string>
+</resources>

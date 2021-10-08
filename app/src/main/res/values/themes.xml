@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.CurriculumKevinMaggio" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#ff00ff</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyDialogThemeFaceBook" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#5499C7</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyDialogThemeGit" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#BA4A00</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyDialogThemeGmail" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#707B7C</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="MyDialogThemeLinkedIn" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#28B463</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
