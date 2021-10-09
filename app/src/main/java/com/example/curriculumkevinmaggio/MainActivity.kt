@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.data = Uri.parse("mailto:")
         emailIntent.type = "text/plain"
-        emailIntent.putExtra(Intent.EXTRA_EMAIL,"kevinmaggio58@gmail.com")
+        emailIntent.putExtra(Intent.EXTRA_EMAIL,"kevinmaggio57@gmail.com")
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Entrevista")
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Kevin Maggio Queremos conocerlo")
 
