@@ -1,10 +1,16 @@
 package com.example.curriculumkevinmaggio
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.example.curriculumkevinmaggio.databinding.ActivityMainBinding
+import android.widget.Toast
+
+
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -25,7 +31,9 @@ class MainActivity : AppCompatActivity() {
         binding.btQuienSoy.setOnClickListener {
             startActivity(Intent(this,QuienSoy::class.java))
         }
-        binding.btSolicitarEntrevista.setOnClickListener { }
+        binding.btSolicitarEntrevista.setOnClickListener {
+            enviarMail()
+        }
 
         binding.ibFacebook.setOnClickListener {
             showDialog(
@@ -62,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun showDialog(style: String, title: String, message: String?) {
+    private fun showDialog(style: String, title: String, message: String?) {
         lateinit var dialog: AlertDialog
         when (style) {
             "facebook" -> dialog =
@@ -70,7 +78,10 @@ class MainActivity : AppCompatActivity() {
                     .setTitle(title)
                     .setPositiveButton(
                         "Abrir"
-                    ) { _, _ -> }
+                    ) { _, _ ->
+                        val uri=Uri.parse("https://www.facebook.com/kevin.maggio.90")
+                        startActivity(Intent(Intent.ACTION_VIEW, uri))
+                    }
                     .setNeutralButton(
                         "Close"
                     ) { _, _ -> }
@@ -80,7 +91,9 @@ class MainActivity : AppCompatActivity() {
                     .setTitle(title)
                     .setPositiveButton(
                         "Abrir"
-                    ) { _, _ -> }
+                    ) { _, _ ->
+                        val uri=Uri.parse("https://outlook.com")
+                        startActivity(Intent(Intent.ACTION_VIEW, uri))  }
                     .setNeutralButton(
                         "Close"
                     ) { _, _ -> }
@@ -90,7 +103,9 @@ class MainActivity : AppCompatActivity() {
                     .setTitle(title)
                     .setPositiveButton(
                         "Abrir"
-                    ) { _, _ -> }
+                    ) { _, _ ->
+                        val uri=Uri.parse("https://github.com/KevinMaggio")
+                        startActivity(Intent(Intent.ACTION_VIEW, uri))   }
                     .setNeutralButton(
                         "Close"
                     ) { _, _ -> }
@@ -100,7 +115,9 @@ class MainActivity : AppCompatActivity() {
                     .setTitle(title)
                     .setPositiveButton(
                         "Abrir"
-                    ) { _, _ -> }
+                    ) { _, _ ->
+                        val uri=Uri.parse("https://www.linkedin.com/in/kevin-maggio57")
+                        startActivity(Intent(Intent.ACTION_VIEW, uri))  }
                     .setNeutralButton(
                         "Close"
                     ) { _, _ -> }
@@ -108,5 +125,24 @@ class MainActivity : AppCompatActivity() {
 
         }
         dialog.show()
+    }
+    @SuppressLint("IntentReset")
+    fun enviarMail() {
+        val emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.data = Uri.parse("mailto:")
+        emailIntent.type = "text/plain"
+        emailIntent.putExtra(Intent.EXTRA_EMAIL,"kevinmaggio58@gmail.com")
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Entrevista")
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Kevin Maggio Queremos conocerlo")
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Enviar email..."))
+            finish()
+        } catch (ex:android.content.ActivityNotFoundException ) {
+            Toast.makeText(
+                this,
+                "No tienes clientes de email instalados.", Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 }
